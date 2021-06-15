@@ -1,3 +1,4 @@
+
 /*esto es un comentario 
 ddddd*/
 :root{
@@ -14,7 +15,7 @@ ddddd*/
 }
 
 body{
-    background: #fff;
+    background-image: url("https://fotos-themonkeybusiness.s3.eu-west-3.amazonaws.com/wp-content/uploads/2021/02/20021741/imagen-de-fondo-para-pagina-web-1170x524.png");
     overflow-x: hidden;
 }
 header{
@@ -73,7 +74,7 @@ header{
 }
 
 .bar-icon span:nth-child(2){
-    top: 30%;
+    bottom: 30%;
     left: 50%;
     background: #fff;
 }
@@ -90,7 +91,7 @@ header{
     top: 50%;
     left: 50%;
     width: 60%;
-    transform: translate(-50%,-50%) rotate(125deg) ;
+    transform: translate(-50%,-50%) rotate(225deg) ;
     background: var(--color1);
 }
 
@@ -105,7 +106,7 @@ header{
     background: #fff;
     transition: 0.5s;
 }
-.bar-icon.active::before{
+.bar-icon.active:before{
     width: 0;
     height: 0;
 }
@@ -114,7 +115,7 @@ header{
     position: absolute;
     top: 70px;
     left: 0;
-    width: 0%;
+    width:0%;
     overflow:hidden ;
     height: 89.4vh;
     background: #f1f4df;
@@ -193,6 +194,12 @@ header{
 
 .acerca-de{
     width: 100%;
+    padding: 50px;
+    margin-top: 100px;
+}
+
+.acerca-de .left{
+    width: 100%;
     display: flex;
     justify-content: center;
     margin-bottom: 70px;
@@ -234,8 +241,107 @@ header{
     font-size: 17px;
     color: var(--color1);
     line-height: 27px;
+    margin: 10px 0px;
 }
 
+.read-more{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
 
+.read-more > a{
+    width: 200px;
+    height: 50px;
+    background: #fff;
+    text-decoration:none ;
+    color: var(--color1);
+    font-size: 20px;
+    text-align: center;
+    transition: 0.5s ease-in-out;
+    border: 1px solid var(--color1);
+    border-radius: 10px;
+    padding: 12px;
+}
 
+.read-more > a:hover{
+    background: var(--color1);
+    color: #fff;
+    border : 1px solid #fff
+}
 
+.game-news{
+    width: 100%;
+    padding: 50px 0px;
+    background: #fff;
+}
+.game-news h2{
+    display: flex;
+    justify-content: center;
+    margin: 50px 0px;
+    font-size: 50px;
+    color: #9e579d;
+    font-weight: 300;
+}
+
+.content-cards{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.content-cards .card{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: #000;
+    margin: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.content-cards .card .card-content{
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center ;
+    background: #000;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.content-cards .card .card-content h4{
+    color: #fff;
+    margin: 20px 0px;
+    font-size: 17px;
+}
+
+.content-cards .card .card-content p{
+    color: #fff;
+    line-height: 30px;
+    font-size: 15px;
+}
+
+.content-cards .card img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: 1s;
+    clip-path: polygon(0 0, 100% 0, 100% 100% , 0 100%, 0% 50%);
+}
+
+.content-cards .card:hover img{
+    clip-path: polygon(100% 0, 100% 0,100% 100%,100% 100%,100% 50%);
+}
